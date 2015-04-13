@@ -103,7 +103,11 @@ while dd < tk                          % outer loop (perpendicular to line)
 
             d1    = d1 - kv;
         else                     % (double) square move (d1 needs extra M1)
-            pt0.x = pt0.x + dd0x;
+            if dx > dy
+                pt0.x = pt0.x + dd0x;
+            else
+                pt0.y = pt0.y + dd0y;    
+            end
 
             d1    = d1 - kd;
             if dd > tk
@@ -112,7 +116,11 @@ while dd < tk                          % outer loop (perpendicular to line)
 
             bitmap = bresenham_line_draw(bitmap, pt0, d1);
 
-            pt0.y = pt0.y + dd0y;
+            if dx > dy
+                pt0.y = pt0.y + dd0y;
+            else
+                pt0.x = pt0.x + dd0x;
+            end
         end
     end
 
