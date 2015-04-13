@@ -41,8 +41,8 @@ function bitmap = murphy_line_draw(bitmap, pt0, pt1, thickness)
 dx = pt1.x - pt0.x;
 dy = pt1.y - pt0.y;
 
-inc_x = sign(dx);
-inc_y = sign(dy);
+inc_x = sign(sign(dx) + 0.5);                             % signum function
+inc_y = sign(sign(dy) + 0.5);
 if dx < 0; dx = -dx; end
 if dy < 0; dy = -dy; end
 
