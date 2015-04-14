@@ -13,13 +13,13 @@ center = 50;
 
 for n = 1:24
     x = cos(n*angle); y = sin(n*angle);
-    
+
     startpoint = struct('x', center + round(15*x), ...
                         'y', center + round(15*y));
     endpoint   = struct('x', center + round(45*x), ...
-                        'y', center + round(45*y));                    
+                        'y', center + round(45*y));
     thickness  = mod(n, 2) + 1;
-                
+
     bitmap = murphy_line_draw(bitmap, startpoint, endpoint, thickness);
 end
 
