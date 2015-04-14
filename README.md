@@ -9,6 +9,8 @@ This implementation works in all octants of the Cartesian coordinate system.
 ## Demo
 
 The Matlab script `demo.m` provides a simple example of how to use the Matlab function `murphy_line_draw.m`.
+It draws lines in each octant and produces the following output.
+![demo output](demo.png)
 
 ## References
 
